@@ -1,3 +1,6 @@
+/* Variables */
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Small reset */
 *,
 ::before,
@@ -5,6 +8,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 #main-header {
@@ -24,4 +32,27 @@
 }
 #main-header .logo-container img {
   width: 150px;
+}
+
+.location-container {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  color: rgba(42, 41, 42, 0.9);
+}
+.location-container span {
+  display: inline-flex;
+  margin-left: -16px;
+  font-weight: 500;
+}
+.location-container span::before {
+  content: "\f3c5";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  padding-right: 16px;
+}
+.location-container i {
+  padding: 0 24px;
 }/*# sourceMappingURL=style.css.map */
