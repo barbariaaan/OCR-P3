@@ -1,0 +1,27 @@
+/* Small reset */
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main-header {
+  box-shadow: 0 1px 5px rgba(2, 2, 2, 0.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+  background-color: #fff;
+}
+#main-header .logo-container {
+  padding: 14px 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#main-header .logo-container img {
+  width: 150px;
+}/*# sourceMappingURL=style.css.map */
