@@ -23,3 +23,27 @@
         padding: 0 24px;
     }
 }
+
+#explore-section {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: $light;
+
+    h1 {
+        line-height: 1.79rem;
+        padding: 0 35px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 1.15rem;
+        padding-top: 12px;
+        color: rgba($dark-gray, 0.9);
+    }
+
+    a {
+        margin-top: 24px;
+        @include main-btn;
+        text-decoration: none;
+    }
+}
