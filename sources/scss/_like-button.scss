@@ -1,0 +1,61 @@
+/* Like button styles */
+.like-button-container {
+    position: absolute;
+    right: 22px;
+    width: 35px;
+    height: 35px;
+    top: 0;
+
+    .like-button {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+
+        svg {
+            max-width: 100%;
+            display: inline-flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+            &.heart-stroke {
+                opacity: 1;
+            }
+
+            &.heart-active {
+                opacity: 0;
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            svg {
+                &.heart-active {
+                    opacity: 1;
+                    transition: fill ease-in 0.35s 0.012s, opacity linear 0.55s;
+
+                    .st0 {
+                        fill: url("#purple-gradient");
+                    }
+                }
+
+                &.heart-stroke {
+                    opacity: 0;
+                    transition: fill ease-in 0.35s 0.012s, opacity linear 0.15s;
+
+                }
+
+            }
+        }
+    }
+}

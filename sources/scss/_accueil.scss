@@ -50,7 +50,7 @@
 
 #howitworks-section {
     margin-top: $section-margin-top;
-    
+
 
     ol {
         list-style: none;
@@ -130,5 +130,70 @@
 
     .degust {
         background-color: lighten($pastel-purple, 35%);
+    }
+}
+
+#restaurant-list-section {
+    background-color: $light;
+    margin-top: $section-margin-top;
+    padding-top: $section-margin-top;
+
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    .card {
+        border-radius: $card-border-radius;
+        background-color: #fff;
+        margin: 0 0 24px;
+        padding-bottom: 6px;
+
+        &:hover {
+            box-shadow: $box-shadow-hover;
+            transition: box-shadow ease-in 0.25ss;
+        }
+
+        .card-header {
+            border-radius: $card-border-radius;
+            position: relative;
+
+            img {
+                border-radius: $card-border-radius;
+                height: 160px;
+                width: 100%;
+                object-fit: cover;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .new-pill {
+                display: inline-flex;
+                position: absolute;
+                right: 22px;
+                top: 22px;
+                padding: 6px 10px;
+                background-color: $pastel-green;
+                color: darken($pastel-green, 48%);
+                border-radius: 2px;
+            }
+        }
+
+        .card-body {
+            margin: 1rem;
+            position: relative;
+
+            p {
+                font-weight: 300;
+                font-size: 1.125rem;
+                padding: 4px 0;
+            }
+
+            //like-button.scss
+
+            a {
+                margin-top: 10px;
+            }
+
+        }
     }
 }

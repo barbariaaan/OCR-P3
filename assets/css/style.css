@@ -2,6 +2,53 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Utilities */
+/* Like button styles */
+.like-button-container {
+  position: absolute;
+  right: 22px;
+  width: 35px;
+  height: 35px;
+  top: 0;
+}
+.like-button-container .like-button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+.like-button-container .like-button svg {
+  max-width: 100%;
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.like-button-container .like-button svg.heart-stroke {
+  opacity: 1;
+}
+.like-button-container .like-button svg.heart-active {
+  opacity: 0;
+}
+.like-button-container .like-button:hover svg.heart-active, .like-button-container .like-button:active svg.heart-active, .like-button-container .like-button:focus svg.heart-active {
+  opacity: 1;
+  transition: fill ease-in 0.35s 0.012s, opacity linear 0.55s;
+}
+.like-button-container .like-button:hover svg.heart-active .st0, .like-button-container .like-button:active svg.heart-active .st0, .like-button-container .like-button:focus svg.heart-active .st0 {
+  fill: url("#purple-gradient");
+}
+.like-button-container .like-button:hover svg.heart-stroke, .like-button-container .like-button:active svg.heart-stroke, .like-button-container .like-button:focus svg.heart-stroke {
+  opacity: 0;
+  transition: fill ease-in 0.35s 0.012s, opacity linear 0.15s;
+}
+
 /* Small reset */
 *,
 ::before,
@@ -20,6 +67,54 @@ body {
   padding: 0 5%;
   width: 100%;
   padding-bottom: 24px;
+}
+
+.btn-command {
+  display: inline-flex;
+  border-radius: 50px;
+  padding: 12px 18px;
+  color: #f5f0f5;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 3px 3px 10px rgba(2, 2, 2, 0.35);
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+  background: rgb(255, 121, 218);
+  background: linear-gradient(175deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  width: 160px;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+}
+.btn-command:hover, .btn-command:focus {
+  background: linear-gradient(175deg, rgb(255, 158, 227) 0%, rgb(157, 101, 225) 100%);
+  box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.38);
+  transition: box-shadow ease-in-out 0.15s;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  border-radius: 50px;
+  padding: 12px 18px;
+  color: #f5f0f5;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 3px 3px 10px rgba(2, 2, 2, 0.35);
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+  background-color: #9356DC;
+  text-decoration: none;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  background: #9b63df;
+  box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.38);
+  transition: all ease-in-out 0.15s;
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.18);
 }
 
 #main-header {
@@ -180,4 +275,58 @@ body {
 }
 #howitworks-section .degust {
   background-color: #f2eafb;
+}
+
+#restaurant-list-section {
+  background-color: #f5f0f5;
+  margin-top: 45px;
+  padding-top: 45px;
+}
+#restaurant-list-section h2 {
+  padding-bottom: 20px;
+}
+#restaurant-list-section .card {
+  border-radius: 12px;
+  background-color: #fff;
+  margin: 0 0 24px;
+  padding-bottom: 6px;
+}
+#restaurant-list-section .card:hover {
+  box-shadow: 4px 4px 8px rgba(69, 29, 58, 0.124);
+  transition: box-shadow ease-in 0.25ss;
+}
+#restaurant-list-section .card .card-header {
+  border-radius: 12px;
+  position: relative;
+}
+#restaurant-list-section .card .card-header img {
+  border-radius: 12px;
+  height: 160px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#restaurant-list-section .card .card-header .new-pill {
+  display: inline-flex;
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  padding: 6px 10px;
+  background-color: #99E2D0;
+  color: #1e6856;
+  border-radius: 2px;
+}
+#restaurant-list-section .card .card-body {
+  margin: 1rem;
+  position: relative;
+}
+#restaurant-list-section .card .card-body p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  padding: 4px 0;
+}
+#restaurant-list-section .card .card-body a {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

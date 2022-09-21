@@ -21,5 +21,25 @@
         box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.38);
         transition: box-shadow ease-in-out 0.15s;
     }
+}
     
+    @mixin btn-secondary {
+        @include btn;
+        background-color: $pastel-purple;
+        text-decoration: none;
+        &:hover, &:focus {
+            background: lighten($pastel-purple, 3%);
+            box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.38);
+            transition: all ease-in-out 0.15s;
+        }
+    }
+
+
+
+@mixin btn-command {
+    @include main-btn;
+    width: 160px;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
 }

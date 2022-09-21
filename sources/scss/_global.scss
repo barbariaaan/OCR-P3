@@ -1,5 +1,7 @@
 @import "variables";
 @import "mixins";
+@import "like-button";
+
 
 /* Small reset */
 *,
@@ -17,6 +19,18 @@ body {
     padding: 0 5%;
     width: 100%;
     padding-bottom: 24px;
+}
+
+.btn-command {
+    @include btn-command;
+}
+
+.btn-secondary {
+    @include btn-secondary;
+}
+
+.box-shadow {
+    box-shadow: $main-box-shadow;
 }
 
 #main-header {
