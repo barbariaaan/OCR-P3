@@ -1,6 +1,7 @@
 /* Variables */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Utilities */
 /* Small reset */
 *,
 ::before,
@@ -13,6 +14,12 @@
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+
+.px-3 {
+  padding: 0 5%;
+  width: 100%;
+  padding-bottom: 24px;
 }
 
 #main-header {
@@ -32,6 +39,16 @@ body {
 }
 #main-header .logo-container img {
   width: 150px;
+}
+
+#test {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
 }
 
 .location-container {
@@ -91,5 +108,76 @@ body {
 #explore-section a:hover, #explore-section a:focus {
   background: linear-gradient(175deg, rgb(255, 158, 227) 0%, rgb(157, 101, 225) 100%);
   box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.38);
-  transition: all ease-in-out 0.15s;
+  transition: box-shadow ease-in-out 0.15s;
+}
+
+#howitworks-section {
+  margin-top: 45px;
+}
+#howitworks-section ol {
+  list-style: none;
+  font-weight: 500;
+  max-width: 350px;
+}
+#howitworks-section ol li {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin: 24px 0;
+}
+#howitworks-section ol li .choose,
+#howitworks-section ol li .compose,
+#howitworks-section ol li .degust {
+  border-radius: 24px;
+  width: 100%;
+  padding: 28px;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.18);
+}
+#howitworks-section ol li .choose::before,
+#howitworks-section ol li .compose::before,
+#howitworks-section ol li .degust::before {
+  content: "1";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  padding: 4px 9px;
+  color: #f5f0f5;
+  border-radius: 50px;
+  background-color: #9356DC;
+}
+#howitworks-section ol li .compose::before {
+  content: "2";
+}
+#howitworks-section ol li .degust::before {
+  content: "3";
+}
+#howitworks-section ol .choose h3::before,
+#howitworks-section ol .compose h3::before,
+#howitworks-section ol .degust h3::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  color: #6b686b;
+  padding-right: 25px;
+  padding-left: 12px;
+  font-size: 1.185rem;
+}
+#howitworks-section ol .choose h3::before {
+  content: "\f3cd";
+}
+#howitworks-section ol .compose h3::before {
+  content: "\f03a";
+}
+#howitworks-section ol .degust h3::before {
+  content: "\f54e";
+  color: #9356DC;
+}
+#howitworks-section .bg-light {
+  background-color: #f9f6f9;
+  padding: 22px;
+}
+#howitworks-section .degust {
+  background-color: #f2eafb;
 }/*# sourceMappingURL=style.css.map */

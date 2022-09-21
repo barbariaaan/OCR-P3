@@ -19,6 +19,7 @@
     &:hover, &:focus {
         background: linear-gradient(175deg, rgb(255, 158, 227) 0%, rgb(157, 101, 225) 100%);
         box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.38);
-        transition: all ease-in-out 0.15s;
+        transition: box-shadow ease-in-out 0.15s;
     }
+    
 }

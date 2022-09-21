@@ -47,3 +47,88 @@
         text-decoration: none;
     }
 }
+
+#howitworks-section {
+    margin-top: $section-margin-top;
+    
+
+    ol {
+        list-style: none;
+        font-weight: 500;
+        max-width: 350px;
+
+        li {
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin: 24px 0;
+
+            .choose,
+            .compose,
+            .degust {
+                border-radius: 24px;
+                width: 100%;
+                padding: 28px;
+                font-size: 0.9rem;
+                box-shadow: $main-box-shadow;
+
+                &::before {
+                    content: "1";
+                    position: absolute;
+                    left: -8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    display: inline-flex;
+                    padding: 4px 9px;
+                    color: $light;
+                    border-radius: 50px;
+                    background-color: $pastel-purple;
+                }
+            }
+
+            .compose::before {
+                content: "2";
+            }
+
+            .degust::before {
+                content: "3";
+            }
+
+        }
+
+        .choose h3,
+        .compose h3,
+        .degust h3 {
+            &::before {
+                content: "";
+                font-family: "Font Awesome 6 Free";
+                color: lighten($dark-gray, 25%);
+                padding-right: 25px;
+                padding-left: 12px;
+                font-size: 1.185rem;
+            }
+        }
+
+        .choose h3::before {
+            content: "\f3cd";
+        }
+
+        .compose h3::before {
+            content: "\f03a";
+        }
+
+        .degust h3::before {
+            content: "\f54e";
+            color: $pastel-purple;
+        }
+    }
+
+    .bg-light {
+        background-color: lighten($light, 2%);
+        padding: 22px;
+    }
+
+    .degust {
+        background-color: lighten($pastel-purple, 35%);
+    }
+}
