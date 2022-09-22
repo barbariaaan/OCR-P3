@@ -169,6 +169,16 @@ body {
   width: 150px;
 }
 
+#prev-nav {
+  display: inline-flex;
+  position: absolute;
+  top: 18px;
+  left: 25px;
+}
+#prev-nav a > i {
+  color: #2a292a;
+}
+
 #test {
   background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
@@ -362,4 +372,325 @@ body {
 }
 #restaurant-list-section .card .card-body a {
   margin-top: 10px;
+}
+
+.bg-container {
+  background-size: cover;
+  height: 18rem;
+  width: 100%;
+}
+.bg-container#palette-bg {
+  background-image: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.bg-container#note-bg {
+  background-image: url("../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.bg-container#francaise-bg {
+  background-image: url("../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.bg-container#delice-bg {
+  background-image: url("../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.container-menu {
+  background-color: #f5f0f5;
+  padding: 45px 5%;
+  margin-top: -65px;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+}
+.container-menu .title-container {
+  position: relative;
+}
+.container-menu .title-container h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Menu content */
+.menu-content-container {
+  margin-top: 45px;
+}
+.menu-content-container h2 {
+  margin-top: 38px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  position: relative;
+  padding-bottom: 8px;
+}
+.menu-content-container h2::after {
+  content: "";
+  display: inline-flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid #99E2D0;
+  height: 3px;
+  width: 50px;
+}
+.menu-content-container .menu-card {
+  display: grid;
+  cursor: pointer;
+  transform: translateY(4px);
+  box-shadow: 2px 2px 4px rgba(2, 2, 2, 0.18);
+  grid-template-columns: 1fr 30px;
+  max-width: 390px;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 0.85rem 12px;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu-content-container .menu-card p {
+  font-weight: 300;
+  padding-top: 4px;
+  max-width: 268px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.95rem;
+}
+.menu-content-container .menu-card .price {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Confirm state on hover/active */
+.menu-card::after {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  background-color: #99E2D0;
+  align-items: center;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 1.45rem;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.menu-card:hover,
+.menu-card:active {
+  position: relative;
+  transition: all ease 0.25s;
+}
+.menu-card:hover::after,
+.menu-card:active::after {
+  opacity: 1;
+  visibility: visible;
+  width: 62px;
+  transition: all ease 0.25s;
+}
+.menu-card:hover .price,
+.menu-card:active .price {
+  position: relative;
+  transform: translateX(-65px);
+  transition: all ease 0.35s 0.012s;
+}
+.menu-card:hover p,
+.menu-card:active p {
+  width: 230px;
+}
+
+.command-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+/* Menus apparition delayed */
+@-webkit-keyframes delayed-apparition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-6px);
+  }
+}
+@keyframes delayed-apparition {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-6px);
+  }
+}
+.menu-card.card-1 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.1s + 0.045s);
+          animation-delay: calc(0.1s + 0.045s);
+}
+
+.menu-card.card-2 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.2s + 0.045s);
+          animation-delay: calc(0.2s + 0.045s);
+}
+
+.menu-card.card-3 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.3s + 0.045s);
+          animation-delay: calc(0.3s + 0.045s);
+}
+
+.menu-card.card-4 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.4s + 0.045s);
+          animation-delay: calc(0.4s + 0.045s);
+}
+
+.menu-card.card-5 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.5s + 0.045s);
+          animation-delay: calc(0.5s + 0.045s);
+}
+
+.menu-card.card-6 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.6s + 0.045s);
+          animation-delay: calc(0.6s + 0.045s);
+}
+
+.menu-card.card-7 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.7s + 0.045s);
+          animation-delay: calc(0.7s + 0.045s);
+}
+
+.menu-card.card-8 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.8s + 0.045s);
+          animation-delay: calc(0.8s + 0.045s);
+}
+
+.menu-card.card-9 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.9s + 0.045s);
+          animation-delay: calc(0.9s + 0.045s);
+}
+
+.menu-card.card-10 {
+  -webkit-animation-name: delayed-apparition;
+          animation-name: delayed-apparition;
+  -webkit-animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+          animation-timing-function: cubic-bezier(0.38, 0.38, 0.5, 0.92);
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(0.10s + 0.045s);
+          animation-delay: calc(0.10s + 0.045s);
+}
+
+@media screen and (min-width: 576px) {
+  .bg-container {
+    height: 42vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-menu .title-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 390px;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 25px;
+  }
+  .container-menu .menu-content-container {
+    margin-top: 22px;
+  }
+  .container-menu .menu-card {
+    width: 650px;
+  }
 }/*# sourceMappingURL=style.css.map */

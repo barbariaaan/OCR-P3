@@ -1,0 +1,208 @@
+.bg-container {
+    background-size: cover;
+    height: 18rem;
+    width: 100%;
+
+    &#palette-bg {
+        background-image: url('../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    }
+
+    &#note-bg {
+        background-image: url('../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+    }
+
+    &#francaise-bg {
+        background-image: url('../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    }
+
+    &#delice-bg {
+        background-image: url('../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    }
+}
+
+.container-menu {
+    background-color: $light;
+    padding: $section-margin-top 5%;
+    margin-top: -65px;
+    border-top-left-radius: $menu-border-radius;
+    border-top-right-radius: $menu-border-radius;
+
+    .title-container {
+        position: relative;
+
+        h1 {
+            font-family: $menu-title-font;
+            font-size: 1.65rem;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        //like-button.scss
+
+    }
+}
+
+/* Menu content */
+.menu-content-container {
+    margin-top: $section-margin-top;
+
+    h2 {
+        margin-top: 38px;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.15rem;
+        position: relative;
+        padding-bottom: 8px;
+
+        &::after {
+            content: "";
+            display: inline-flex;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-bottom: 3px solid $pastel-green;
+            height: 3px;
+            width: 50px;
+        }
+    }
+
+    .menu-card {
+        display: grid;
+        cursor: pointer;
+        transform: translateY(4px);
+        box-shadow: $main-box-shadow;
+        grid-template-columns: 1fr 30px;
+        max-width: 390px;
+        margin-top: 1rem;
+        background-color: #fff;
+        border-radius: $card-border-radius;
+        padding: 0.85rem 12px;
+        opacity: 0;
+        visibility: hidden;
+
+        p {
+            font-weight: 300;
+            padding-top: 4px;
+            max-width: 268px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 0.95rem;
+        }
+
+        .price {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}
+
+/* Confirm state on hover/active */
+.menu-card::after {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    background-color: $pastel-green;
+    align-items: center;
+    border-top-right-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+    font-size: 1.45rem;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.menu-card:hover,
+.menu-card:active {
+    position: relative;
+    transition: all ease 0.25s;
+
+    &::after {
+        opacity: 1;
+        visibility: visible;
+        width: 62px;
+        transition: all ease 0.25s;
+    }
+
+    .price {
+        position: relative;
+        transform: translateX(-65px);
+        transition: all ease 0.35s 0.012s;
+    }
+
+    p {
+        width: 230px;
+    }
+}
+
+.command-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: $section-margin-top;
+}
+
+/* Menus apparition delayed */
+@keyframes delayed-apparition {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(6px);
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-6px);
+    }
+}
+
+@for $i from 1 through 10 {
+    .menu-card.card-#{$i} {
+        animation-name: delayed-apparition;
+        animation-timing-function: cubic-bezier(.38, .38, .5, .92);
+        animation-duration: 0.35s;
+        animation-fill-mode: forwards;
+        animation-delay: calc(0.#{$i}s + 0.045s);
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .bg-container {
+        height: 42vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 390px;
+            width: 100%;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 25px;
+        }
+
+        .menu-content-container {
+            margin-top: 22px;
+        }
+
+        .menu-card {
+            width: 650px;
+        }
+    }
+}

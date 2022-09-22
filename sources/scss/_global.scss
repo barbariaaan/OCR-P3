@@ -54,6 +54,17 @@ body {
     }
 }
 
+#prev-nav {
+    display: inline-flex;
+    position: absolute;
+    top: 18px;
+    left: 25px;
+
+    a>i {
+        color: $dark-gray;
+    }
+}
+
 #test{
     background-color: rgba(0,0,0, 0.75);
     position:fixed;
