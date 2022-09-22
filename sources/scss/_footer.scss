@@ -1,0 +1,44 @@
+footer#main-footer {
+    background-color: $dark-gray;
+    padding: $section-margin-top 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $light;
+
+    .logo-footer-container {
+        padding-bottom: 12px;
+        svg {
+            width: 120px;
+        }
+    }
+
+    a {
+        color: $light;
+        display: block;
+        text-decoration: none;
+        padding: 4px 0;
+
+        &#propose-restaurant,
+        &#become-partner {
+            &::before {
+                content: "";
+                font-family: "Font Awesome 6 Free";
+                font-weight: 700;
+                padding-right: 10px;
+            }
+        }
+
+        &#propose-restaurant {
+            &::before {
+                content: "\f2e7"
+            }
+        }
+
+        &#become-partner {
+            &::before {
+                content: "\f4c4"
+            }
+        }
+    }
+}

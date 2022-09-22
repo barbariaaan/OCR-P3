@@ -49,6 +49,39 @@
   transition: fill ease-in 0.35s 0.012s, opacity linear 0.15s;
 }
 
+footer#main-footer {
+  background-color: #2a292a;
+  padding: 45px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f5f0f5;
+}
+footer#main-footer .logo-footer-container {
+  padding-bottom: 12px;
+}
+footer#main-footer .logo-footer-container svg {
+  width: 120px;
+}
+footer#main-footer a {
+  color: #f5f0f5;
+  display: block;
+  text-decoration: none;
+  padding: 4px 0;
+}
+footer#main-footer a#propose-restaurant::before, footer#main-footer a#become-partner::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  padding-right: 10px;
+}
+footer#main-footer a#propose-restaurant::before {
+  content: "\f2e7";
+}
+footer#main-footer a#become-partner::before {
+  content: "\f4c4";
+}
+
 /* Small reset */
 *,
 ::before,
