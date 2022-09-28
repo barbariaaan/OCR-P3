@@ -126,17 +126,22 @@
     .bg-light {
         background-color: lighten($light, 2%);
         padding: 22px;
-    }
 
-    .degust {
-        background-color: lighten($pastel-purple, 35%);
+        &:hover{
+            background-color: lighten($pastel-purple, 30%);
+        }
     }
+    
 }
 
 #restaurant-list-section {
     background-color: $light;
     margin-top: $section-margin-top;
     padding-top: $section-margin-top;
+    a{
+     text-decoration: none;
+     color:black;
+    }
 
     h2 {
         padding-bottom: 20px;

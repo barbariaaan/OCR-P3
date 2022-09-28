@@ -390,14 +390,18 @@ body {
   background-color: #f9f6f9;
   padding: 22px;
 }
-#howitworks-section .degust {
-  background-color: #f2eafb;
+#howitworks-section .bg-light:hover {
+  background-color: #e4d5f6;
 }
 
 #restaurant-list-section {
   background-color: #f5f0f5;
   margin-top: 45px;
   padding-top: 45px;
+}
+#restaurant-list-section a {
+  text-decoration: none;
+  color: black;
 }
 #restaurant-list-section h2 {
   padding-bottom: 20px;
