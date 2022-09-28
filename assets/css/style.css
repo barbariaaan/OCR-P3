@@ -2,6 +2,80 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Utilities */
+#loader-container {
+  position: fixed;
+  background-color: #FFFFFF;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: invisibility 3s 1 forwards;
+          animation: invisibility 3s 1 forwards;
+}
+
+@-webkit-keyframes invisibility {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes invisibility {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #99E2D0;
+}
+.spinner.spinner-circle {
+  border: 4px rgba(255, 121, 218, 0.9) solid;
+  border-top: 4px #9356dc solid;
+  border-radius: 50%;
+  -webkit-animation: spCircRot 0.6s infinite linear;
+  animation: spCircRot 0.6s infinite linear;
+}
+@-webkit-keyframes spCircRot {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes spCircRot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 /* Like button styles */
 .like-button-container {
   position: absolute;
@@ -374,6 +448,56 @@ body {
   margin-top: 10px;
 }
 
+@media screen and (min-width: 576px) {
+  section#howitworks-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  section#howitworks-section .container {
+    max-width: 450px;
+  }
+  #restaurant-list-section .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #restaurant-list-section .cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section#howitworks-section {
+    display: flex;
+    justify-content: flex-start;
+  }
+  section#howitworks-section .container {
+    max-width: 100vw;
+  }
+  section#howitworks-section ol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  }
+  section#howitworks-section ol li {
+    width: 100%;
+    margin: 24px 20px;
+  }
+  section#howitworks-section ol li .choose,
+section#howitworks-section ol li .compose,
+section#howitworks-section ol li .degust {
+    padding: 28px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #restaurant-list-section .cards-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 .bg-container {
   background-size: cover;
   height: 18rem;
@@ -692,5 +816,29 @@ body {
   }
   .container-menu .menu-card {
     width: 650px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-container {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-menu .title-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 25px;
+  }
+  .container-menu .menu-content-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  .container-menu .menu-card {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

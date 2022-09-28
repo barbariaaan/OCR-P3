@@ -1,0 +1,61 @@
+#loader-container {
+    position: fixed;
+    background-color: #FFFFFF;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    animation: invisibility 3s 1 forwards;
+}
+
+@keyframes invisibility {
+    0% {
+        opacity: 1;
+        visibility:visible;
+    }
+    90% { opacity: 1;
+        visibility:visible;
+
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    margin: auto;
+    background-color:#99E2D0;
+    &.spinner-circle {
+      border: 4px rgba(#FF79DA, 0.90) solid;
+      border-top: 4px rgba(#9356DC, 1) solid;
+      border-radius: 50%;
+      -webkit-animation: spCircRot 0.6s infinite linear;
+      animation: spCircRot 0.6s infinite linear;
+    }
+    @-webkit-keyframes spCircRot {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+    @keyframes spCircRot {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+  
