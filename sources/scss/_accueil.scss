@@ -115,11 +115,12 @@
 
         .compose h3::before {
             content: "\f03a";
+            
         }
 
         .degust h3::before {
             content: "\f54e";
-            color: $pastel-purple;
+        
         }
     }
 
@@ -129,6 +130,7 @@
 
         &:hover{
             background-color: lighten($pastel-purple, 30%);
+    
         }
     }
     
