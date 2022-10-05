@@ -379,11 +379,20 @@ body {
 #howitworks-section ol .choose h3::before {
   content: "\f3cd";
 }
+#howitworks-section ol .choose h3::before:hover {
+  color: rgba(147, 86, 220, 0.9);
+}
 #howitworks-section ol .compose h3::before {
   content: "\f03a";
 }
+#howitworks-section ol .compose h3::before:hover {
+  color: rgba(147, 86, 220, 0.9);
+}
 #howitworks-section ol .degust h3::before {
   content: "\f54e";
+}
+#howitworks-section ol .degust h3::before:hover {
+  color: rgba(147, 86, 220, 0.9);
 }
 #howitworks-section .bg-light {
   background-color: white;
@@ -413,7 +422,7 @@ body {
 }
 #restaurant-list-section .card:hover {
   box-shadow: 4px 4px 8px rgba(69, 29, 58, 0.124);
-  transition: box-shadow ease-in 0.25ss;
+  transition: box-shadow ease-in 0.25s;
 }
 #restaurant-list-section .card .card-header {
   border-radius: 12px;

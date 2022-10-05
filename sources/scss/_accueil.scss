@@ -111,16 +111,22 @@
 
         .choose h3::before {
             content: "\f3cd";
+            &:hover{ color: rgba($pastel-purple, 0.9);
+            }   
         }
+        
 
         .compose h3::before {
             content: "\f03a";
+            &:hover{ color: rgba($pastel-purple, 0.9);
+            }
             
         }
 
         .degust h3::before {
             content: "\f54e";
-        
+            &:hover{ color: rgba($pastel-purple, 0.9);
+            }
         }
     }
 
@@ -157,7 +163,7 @@
 
         &:hover {
             box-shadow: $box-shadow-hover;
-            transition: box-shadow ease-in 0.25ss;
+            transition: box-shadow ease-in 0.25s;
         }
 
         .card-header {
