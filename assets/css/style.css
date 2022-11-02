@@ -580,6 +580,8 @@ section#howitworks-section ol li .degust {
   padding: 0.85rem 12px;
   opacity: 0;
   visibility: hidden;
+  position: relative;
+  z-index: 0;
 }
 .menu-content-container .menu-card p {
   font-weight: 300;
@@ -596,15 +598,29 @@ section#howitworks-section ol li .degust {
 }
 
 /* Confirm state on hover/active */
-.menu-card::after {
+.menu-card::before {
   content: "\f058";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #fff;
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
-  background-color: #99E2D0;
   align-items: center;
+  font-size: 1.45rem;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+}
+
+.menu-card::after {
+  content: "";
+  background-color: #99E2D0;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   font-size: 1.45rem;
@@ -617,6 +633,7 @@ section#howitworks-section ol li .degust {
   top: 0;
   bottom: 0;
   height: 100%;
+  z-index: 0;
 }
 
 .menu-card:hover,
@@ -630,6 +647,14 @@ section#howitworks-section ol li .degust {
   visibility: visible;
   width: 62px;
   transition: all ease 0.25s;
+}
+.menu-card:hover::before,
+.menu-card:active::before {
+  opacity: 1;
+  visibility: visible;
+  width: 62px;
+  transition: opacity ease 0.25s 0.25s, visibility ease 0.25s 0.25s, transform ease-in 0.45s 0.15s;
+  transform: rotate(360deg);
 }
 .menu-card:hover .price,
 .menu-card:active .price {
