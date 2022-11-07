@@ -118,6 +118,18 @@
 .like-button-container .like-button:hover svg.heart-active .st0, .like-button-container .like-button:active svg.heart-active .st0, .like-button-container .like-button:focus svg.heart-active .st0 {
   fill: url("#purple-gradient");
 }
+.like-button-container .like-button:hover svg.heart-active .st01, .like-button-container .like-button:active svg.heart-active .st01, .like-button-container .like-button:focus svg.heart-active .st01 {
+  fill: url("#purple-gradient1");
+}
+.like-button-container .like-button:hover svg.heart-active .st02, .like-button-container .like-button:active svg.heart-active .st02, .like-button-container .like-button:focus svg.heart-active .st02 {
+  fill: url("#purple-gradient2");
+}
+.like-button-container .like-button:hover svg.heart-active .st03, .like-button-container .like-button:active svg.heart-active .st03, .like-button-container .like-button:focus svg.heart-active .st03 {
+  fill: url("#purple-gradient3");
+}
+.like-button-container .like-button:hover svg.heart-active .st04, .like-button-container .like-button:active svg.heart-active .st04, .like-button-container .like-button:focus svg.heart-active .st04 {
+  fill: url("#purple-gradient4");
+}
 .like-button-container .like-button:hover svg.heart-stroke, .like-button-container .like-button:active svg.heart-stroke, .like-button-container .like-button:focus svg.heart-stroke {
   opacity: 0;
   transition: fill ease-in 0.35s 0.012s, opacity linear 0.15s;
@@ -287,9 +299,9 @@ body {
 }
 
 #explore-section {
-  padding: 45px 20px;
+  padding: 62px 20px;
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: rgba(13, 13, 13, 0.0392156863);
 }
 #explore-section h1 {
   line-height: 1.79rem;
@@ -556,6 +568,10 @@ section#howitworks-section ol li .degust {
   font-size: 1.15rem;
   position: relative;
   padding-bottom: 8px;
+  overflow: hidden;
+  width: 268px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu-content-container h2::after {
   content: "";
